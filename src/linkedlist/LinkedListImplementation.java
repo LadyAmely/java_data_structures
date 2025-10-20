@@ -9,7 +9,7 @@ package linkedlist;
  *
  * @param <E> the type of elements held in this list
  */
-public class LinkedListImplementation<E> {
+class LinkedListImplementation<E> {
 
     /**
      * Node represents an element in the doubly-linked list.
@@ -36,15 +36,15 @@ public class LinkedListImplementation<E> {
      * @param e the element to add
      */
     public void addFirst(E e) {
-        Node<E> f = first; // f = null
-        Node<E> newNode = new Node<>(null, e, f); // newNode: prev = null, item = A, next = null
-        first = newNode; // first: prev = null, item = A, next = null
+        Node<E> f = first;
+        Node<E> newNode = new Node<>(null, e, f);
+        first = newNode;
         if (f == null) {
-            last = newNode; //  last: prev = null, item = A, next = null
+            last = newNode;
         } else {
-            f.prev = newNode; // nie wykona sie
+            f.prev = newNode;
         }
-        size++; // 1
+        size++;
     }
 
     /**
